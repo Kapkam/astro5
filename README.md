@@ -25,6 +25,7 @@ Este repositorio documenta mi proceso de aprendizaje personal con **Astro 5**, e
 - HTML/CSS
 - JavaScript
 - TypeScript
+- Tailwind
 
 ## 🎯 Objetivos de Aprendizaje
 
