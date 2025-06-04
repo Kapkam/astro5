@@ -15,12 +15,15 @@ const { data, slug } = book;
 const { title, author, img, readtime, description, buy } = data;
 // Sirve para renderizar el contenido del libro del Markdown
 const { Content } = await render(book);
+export const prerender = true
+
 ---
 
-<Layout title=`${title}`>
+<Layout title=`${title} - Solo leveling Books`>
     <div class="flex gap-12">
-        <aside class="felx flex-col items-center gap-4">
-            <img transition:name={`img-${slug}`} class="rounded w-72 h-auto" src={`/${img}`} alt={title}>
+        <aside class="flex flex-col items-center gap-4">
+            <a href='/' class="hover:underline opacity-70 mb-4">← Volver atrás</a>
+            <img transition:name={`img-${slug}`} class="rounded w-72 h-auto" src={`/${img}`} alt={title} />
             <!-- enlace para comprar -->
         </aside>
         <main class="max-w-3xl">
@@ -30,5 +33,4 @@ const { Content } = await render(book);
             </div>
         </main>
     </div>
-    <h1>{title}</h1>
 </Layout>
