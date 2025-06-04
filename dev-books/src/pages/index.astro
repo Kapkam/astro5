@@ -5,6 +5,8 @@ import { getCollection } from 'astro:content';
 // Obtener los libros y ordenarlos por el campo 'order'
 const books = await getCollection('books')
   .then(books => books.sort((a, b) => a.data.order - b.data.order));
+
+export const prerender = true; // Desactivar prerenderizado para este libro
 ---
 
 <Layout title="Libros de Solo Leveling">
